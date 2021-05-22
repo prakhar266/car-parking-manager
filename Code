@@ -1,0 +1,95 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+    int c=0;
+    int r=0;
+    int b=0;
+ string Name;
+cout<<"Please Enter Your Name Sir/Madam \n";
+   getline(cin,Name);
+        cout<<"Hi " <<   Name   <<" Welcome to car parking \n";
+    int u_input;
+    int amount=0,count=0;
+
+    while(true)
+    {
+        //menu
+        cout<<"*****************Choose our service...************************"<<endl;
+
+cout<<"Press 1 for rickshaw"<<endl;
+    cout<<"Press 2 for car"<<endl;
+    cout<<"Press 3 for bus"<<endl;
+    cout<<"Press 4 for show the record"<<endl;
+    cout<<"Press 5 for delete the record"<<endl;
+    cout<<"*******************Press the right key***********************"<<endl;
+    cin>>u_input;
+    if(u_input==1)
+    {
+        if(count <=50)
+        {
+            r=r+1;
+        amount = amount + 100;
+        count = count + 1;
+
+    }
+    else
+        cout<<"No more cars,Parking is full"<<endl;
+    }
+    else if(u_input==2)
+    {
+        if(count<=50)
+        {
+        amount = amount + 200;
+        count = count + 1;
+        c++;
+
+    }
+    else
+        cout<<"Parking is full"<<endl;
+    }
+    else if(u_input==3)
+    {
+        if(count <=50)
+        {
+            b++;
+        amount = amount + 300;
+        count = count + 1;
+
+    }
+    else
+        cout<<"Parking is full"<<endl;
+    }
+    else if(u_input==4)
+    {
+        cout<<"****************************************"<<endl;
+        cout<<"The total amount ="<<amount<<endl;
+        cout<<"The total number of vehicles parked = "<<count<<endl;
+        cout<<"The total number of cars parked = "<<c<<endl;
+        cout<<"The total number of rickshaw parked = "<<r<<endl;
+        cout<<"The total number of bus parked = "<<b<<endl;
+        cout<<"*************Thanks for coming***********************"<<endl<<endl;
+    }
+    else if(u_input==5)
+    {
+        amount = 0;
+        count = 0;
+        r=0;
+        b=0;
+        c=0;
+         cout<<"****************************************"<<endl<<endl;
+         cout<<"RECORD DELETED"<<endl;
+          cout<<"****************************************"<<endl<<endl;
+
+
+    }
+    else{
+
+        cout<<"Invalid number"<<endl;
+    }
+
+    }
+    return 0;
+}
